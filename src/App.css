@@ -1,0 +1,92 @@
+body {
+  background-color: lightgrey;
+}
+
+.font-link {
+  font-family: 'Raleway', sans-serif;
+}
+
+::placeholder {
+  color: darkgrey;
+  font-family: 'Raleway', sans-serif;
+  padding-left: 10px;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.student-info-page {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  margin-top: 10%;
+}
+
+.scroll-and-containers {
+  max-height: 70vh;
+  overflow: scroll;  
+  border-radius: 0px 10px;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+
+.search-input {
+  width: 712px;
+  height: 50px;
+  border: 1px gray solid;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.student-img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+}
+
+.toggle-grades-btn {
+  /* position: absolute;
+  right: 150px;
+  margin-top: 20px; */
+}
+
+.student-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border: 1px gray solid;
+  width: 700px;
+  padding: 10px 0 10px 10px;
+  background-color: white;
+}
+
+.student-info {
+  display: flex;
+  flex-direction: column;
+  margin-left: 60px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: gray;
+}
+
+.student-name {
+  font-size: 40px;
+  font-weight: bold;
+  margin-left: -30px;
+  color: black;
+}
+
+.hide {
+  display: none;
+}
