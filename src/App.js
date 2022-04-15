@@ -1,16 +1,12 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import "./App.css";
+import StudentInfo from './Components/studentInfo';
 
 const FetchData = (props) => {
   const [unfilteredList, setUnfilteredList] = useState([]);
   const [search, setSearch] = useState("");
-  const [areGradesOpen, setAreGradesOpen] = useState(false);
   const [filteredList, setFilteredList] = useState([]);
-
-  const toggleGrades = () => {
-    setAreGradesOpen(!areGradesOpen);
-  };
 
   useEffect(() => {
     try {
@@ -21,15 +17,6 @@ const FetchData = (props) => {
       console.log(err);
     }
   }, []);
-
-  const average = (grades) => {
-    let total = 0;
-    for (let i = 0; i < grades.length; i++) {
-      total += +grades[i];
-    }
-    const avg = total / grades.length;
-    return avg.toFixed(2);
-  };
 
   const updateFilteredList = (searchTerm) => {
     const searchedStudent = unfilteredList.filter((student) => {
@@ -42,28 +29,13 @@ const FetchData = (props) => {
 
   const studentMap = (studentList) => {
     return studentList.map((student) => {
-      const { id, firstName, lastName, email, skill, grades, pic, company } =
-        student;
-
       return (
-        <div>
-          <div key={id} className="student-container">
-            <div className="flex-row">
-              <img src={pic} className="student-img" />
-              <div className="student-info">
-                <div className="student-name">{`${firstName.toUpperCase()} ${lastName.toUpperCase()}`}</div>
-                <div>Email: {email}</div>
-                <div>Company: {company}</div>
-                <div>Skill: {skill}</div>
-                <div>Average: {average(grades)}</div>
-              </div>
-            </div>
-            <button onClick={toggleGrades} className='toggle-grades-btn'>+</button>
-          </div>
-        </div>
+          <StudentInfo student={student} />
       );
     });
   };
+
+
 
   return (
     <div className="student-info-page font-link">

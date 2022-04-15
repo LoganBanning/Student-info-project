@@ -30,7 +30,7 @@ body {
 .scroll-and-containers {
   max-height: 70vh;
   overflow: scroll;  
-  border-radius: 0px 10px;
+  border-radius: 0px 0px 10px 10px;
 }
 
 ::-webkit-scrollbar {
@@ -47,11 +47,12 @@ body {
 }
 
 .student-img {
-  width: 100px;
-  height: 100px;
+  width: 125px;
+  height: 125px;
   border-radius: 50%;
   justify-content: center;
   align-items: center;
+  border: 1px black solid;
 }
 
 .toggle-grades-btn {
