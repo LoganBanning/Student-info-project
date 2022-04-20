@@ -48,7 +48,7 @@ const StudentInfo = (props) => {
   return (
     <div key={id} className="student-container">
       <div className="flex-row">
-        <img src={pic} className="student-img" />
+        <img src={pic} alt='student' className="student-img" />
         <div className="student-info">
           <div className="student-name">{`${firstName?.toUpperCase()} ${lastName?.toUpperCase()}`}</div>
           <div>Email: {email}</div>
