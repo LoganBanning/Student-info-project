@@ -11,7 +11,7 @@ body {
   font-family: 'Raleway', sans-serif;
   padding-left: 10px;
   font-weight: bold;
-  font-size: 20px;
+  font-size: 15px;
 }
 
 .flex-row {
@@ -46,15 +46,27 @@ body {
 .search-input {
   width: 712px;
   height: 50px;
-  border: 1px gray solid;
+  border: 1px #c6c5b9 solid;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
+}
+
+.tag-input {
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  margin-top: 5px;
+  font-size: medium;
+}
+
+.tag-input:focus {
+  outline: none;
 }
 
 .search-tag-input {
   width: 712px;
   height: 50px;
-  border: 1px gray solid;
+  border: 1px #c6c5b9 solid;
 }
 
 .student-img {
@@ -67,16 +79,21 @@ body {
 }
 
 .toggle-grades-btn {
-  /* position: absolute;
-  right: 150px;
-  margin-top: 20px; */
+  width: 50px;
+  height: 50px;
+  color: #c6c5b9;
+}
+
+.toggle-grades-btn:hover {
+  color: black;
+  cursor: pointer;
 }
 
 .student-container {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  border: 1px gray solid;
+  border: 1px #c6c5b9 solid;
   width: 700px;
   padding: 10px 0 10px 10px;
   background-color: white;
@@ -101,4 +118,59 @@ body {
 
 .hide {
   display: none;
+}
+
+.student-tags {
+  background-color: lightgray;
+  width: min-content;
+  margin: 5px 5px;
+  padding: 2px 5px;
+  color: black;
+  border-radius: 2px;
+}
+
+@media (max-width: 730px) {
+  .student-container {
+    width: 500px;
+  }
+
+  .search-input {
+    width: 512px;
+  }
+
+  .search-tag-input {
+    width: 512px;
+  }
+
+  .student-name {
+    font-size: 30px;
+  }
+}
+
+@media (max-width: 540px) {
+  .student-container {
+    width: 390px;
+    font-size: small;
+  }
+
+  .search-input {
+    width: 402px;
+  }
+
+  .search-tag-input {
+    width: 402px;
+  }
+
+  .student-name {
+    font-size: 20px;
+  }
+
+  .tag-input {
+    width: 90px;
+  }
+
+  .student-img {
+    width: 100px;
+    height: 100px;
+  }
 }
