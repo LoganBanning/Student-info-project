@@ -113,7 +113,7 @@ const FetchData = (props) => {
 
   return (
     <div className="student-info-page font-link">
-      <div>
+      <div className='name-and-tag-search'>
         <input
           className="search-input"
           type="search"
@@ -122,7 +122,7 @@ const FetchData = (props) => {
           onChange={(e) => updateFilteredList(e.target.value, false)}
         ></input>
         <input
-          className="search-input"
+          className="search-tag-input"
           type="search"
           id="search-tag"
           placeholder="Search by Tag"
